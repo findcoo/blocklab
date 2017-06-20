@@ -1,0 +1,12 @@
+version: "3"
+
+services:
+ net1:
+  image: geth
+  volumes:
+   - "$PWD/data:/root/.ethereum"
+  ports:
+   - "30303:30303"
+   - "30303:30303/udp"
+   - "8545:8545"
+
