@@ -2,5 +2,5 @@
 
 mkdir -p /root/.ethereum/keystore
 cp /root/keystore/* /root/.ethereum/keystore/
-geth init genesis.json
+geth init /root/genesis.json
 exec "${@}"

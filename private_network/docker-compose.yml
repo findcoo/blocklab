@@ -2,11 +2,22 @@ version: "3"
 
 services:
  net1:
-  image: geth
+  build: .
+  image: pnet
   volumes:
-   - "$PWD/data:/root/.ethereum"
+   - "eth-data:/root/.ethereum"
   ports:
    - "30303:30303"
    - "30303:30303/udp"
    - "8545:8545"
-
+ 
+ node1:
+  image: ethereum/client-go:latest
+  depends_on:
+   - "net1"
+     #  volumes:
+     #   - "eth-data:/root/.ethereum"
+  command: ["--networkid", "333", "--ipcdisable", "--rpcport", "8545", "--rpcaddr", "net1"]
+ 
+volumes:
+ eth-data:
