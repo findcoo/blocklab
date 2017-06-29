@@ -6,4 +6,4 @@ COPY entrypoint.sh /root/entrypoint.sh
 COPY keystore/ /root/keystore/
 
 ENTRYPOINT ["/root/entrypoint.sh"]
-CMD ["geth", "-nodiscover", "--networkid", "333"]
+CMD ["geth", "--nodiscover", "--networkid", "333"]
