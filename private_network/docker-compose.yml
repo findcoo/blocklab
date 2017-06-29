@@ -5,7 +5,7 @@ services:
   build: .
   image: pnet
   volumes:
-   - "eth-data:/root/.ethereum"
+   - "$PWD/data:/root/.ethereum"
   ports:
    - "30303:30303"
    - "30303:30303/udp"
@@ -15,9 +15,7 @@ services:
   image: ethereum/client-go:latest
   depends_on:
    - "net1"
-     #  volumes:
-     #   - "eth-data:/root/.ethereum"
-  command: ["--networkid", "333", "--ipcdisable", "--rpcport", "8545", "--rpcaddr", "net1"]
+  volumes:
+   - "$PWD/data:/root/.ethereum"
+  command: ["--mine", "--networkid", "333", "--bootnodes", "enode://net1:30303"]
  
-volumes:
- eth-data:
