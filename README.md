@@ -1,4 +1,4 @@
-## ethlab
+## blocklab
 
 ### 개요 ###
 dapp 개발을 위한 다양한 시도들
@@ -22,3 +22,9 @@ dapp init # solidity project의 skel 생성, 개발에 필요한 빌드 및 테�
 dapp install ds-auth # 라이브러리 설치
 ```
 전반적으로 npm과 비슷하다. Makefile, Dappfile을 통해 설정한다.
+
+### truffle ###
+* 본격적인 dapp 프레임워크
+  
+  solidity 컴파일 및 배포를 자동화하고 손쉽게 웹페이지를 구성
+  하여 dapp을 만든다.
