@@ -2,12 +2,12 @@
 
 하이퍼레져에 대해 알아보자.
 
-## Introduction (🔗)[https://hyperledger-fabric.readthedocs.io/en/release-1.0/blockchain.html#introduction]
+## Introduction [🔗](https://hyperledger-fabric.readthedocs.io/en/release-1.0/blockchain.html#introduction)
 
 하이퍼레져 페브릭은 고도의 기밀성, 탄력성, 유연성 및 가용성을 제공하는 모듈형 아키텍쳐입니다.
 각각 특성을 갖는 구성요소들을 조합하여 경제 생태계에서 생기는 복잡하고 어려운 문제들을 해결하는 목적으로 설계되었습니다.
 
-## Capabilities (🔗)[https://hyperledger-fabric.readthedocs.io/en/release-1.0/capabilities.html]
+## Capabilities [🔗](https://hyperledger-fabric.readthedocs.io/en/release-1.0/capabilities.html)
 
 ### Identity management
 
