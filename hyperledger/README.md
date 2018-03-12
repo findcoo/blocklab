@@ -16,6 +16,7 @@
         - [Privacy through Channels](#privacy-through-channels)
         - [Security & Membership Services](#security-membership-services)
         - [Consensus](#consensus)
+    - [Glossary 🔗](#glossary-%F0%9F%94%97)
 
 ## Introduction [🔗](https://hyperledger-fabric.readthedocs.io/en/release-1.0/blockchain.html#introduction)
 
@@ -92,6 +93,26 @@ node 의 성질에 맞추어 네트워크 규칙을 할당합니다. 이는 네�
 분산 원장 기술에 있어 합의라 함은 하나의 알고리즘 처럼 여겨져 왔습니다. 하지만 하이퍼레저 페브릭에서는 단순히 거래의 순서를 지키는 것을 뜻하지 않습니다.
 이는 순서, 검증, 약속 등 모든 트랜잭션 흐름의 기반이 됩니다. 세부적으로는 트랜잭션과 블럭의 정확성을 확보하는 모든 과정을 합의라 할 수 있습니다.
 
+## Glossary [🔗](https://hyperledger-fabric.readthedocs.io/en/release-1.0/glossary.html#glossary)
 
+용어에 대한 정리는 간략하게 합니다. 세세한 사항은 위에 링크를 통해 원문을 볼 수 있습니다.
 
-
+* Anchor Peer - 멤버는 anchor peer를 통해 채널상의 다른 peer들을 식별합니다.
+* Block - 정렬된 트랜잭션 집합은 암호학적으로 이전 블락에 연결됩니다.
+* Chain - peer가 ordering service로 받은 블럭을 검증하고 peer의 파일 시스템상의 해쉬 체인에 추가합니다.
+* Chaincode - 원장에서 사용되는 비즈니스 로직입니다.
+* Channel - private blockchain overlay를 뜻 합니다. 데이터의 독립성과 신뢰성을 보장합니다. 
+* Commitment - transaction의 추가와 쓰기 작업을 뜻합니다. 포괄적으로는 트랜잭션의 검증을 포함합니다.
+* Concurrency Control Version Check - peer간의 동기화된 상태를 유지하는 방법입니다. 트랜잭션을 쓰거나 추가할 때는 원장에 데이터가 불변함을 보장해야 합니다.
+* Congiguration Block - 채널과 전체 네트워크에 영향을 주는 설정 변경 사항은 이 블럭을 생성합니다. 이 블럭은 기원이 되는 블럭의 정보와 다양한 정보를 포함합니다.
+* Current State - 원장에 기록된 모든 유효한 트랜잭션의 최근 값, Chaincode는 최근 상태의 데이터 값을 대상으로 실행된다.
+* Dynamic Membership - 멤버, peer, ordering service node의 추가와 삭제를 전체 네트워크에 영향 없이 수행합니다. 
+* Endorsement - 체인코드의 실행에 있어 이에 대한 승인을 뜻합니다.
+* Endorsement policy - 체인코드를 포함하는 트랜잭션을 실행하는 peer node의 선정에 있어 최소의 endorsing peer노드들이 필요합니다.
+* Genesis block - 블럭체인 네트워크의 생성에 기여하는 configuration block
+* Gossip protocol - peer node의 식별과 채널의 멤버쉽 관리, 모든 peer node에 원장 데이터 보급, 모든 peer node의 원장 상태 동기화를 수행합니다.
+* Membership Service Provider - 클라이언트에 인증을 부여하는 시스템의 추상적 요소를 뜻한다. 
+* Ordering Service - 트랜잭션을 유발하는 노드들의 집합 
+* Policy - 보증, 검증, chaincode 관리, 네트워크 및 채널 관리에 대한 정책들이 있다.
+* Proposal - 보증을 위한 요청
+* State Database - 현재 상태에 관한 데이터는 상태 데이터베이스에 저장된다. 이는 chaincode에서 현재 상태를 읽기 위함이다. levelDB와 couchDB를 지원한다.
