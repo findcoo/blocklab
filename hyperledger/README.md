@@ -110,7 +110,7 @@ node 의 성질에 맞추어 네트워크 규칙을 할당합니다. 이는 네�
 * Channel - private blockchain overlay 를 뜻 합니다. 데이터의 독립성과 신뢰성을 보장합니다.
 * Commitment - transaction 의 추가와 쓰기 작업을 뜻합니다. 포괄적으로는 트랜잭션의 검증을 포함합니다.
 * Concurrency Control Version Check - peer 간의 동기화된 상태를 유지하는 방법입니다. 트랜잭션을 쓰거나 추가할 때는 원장에 데이터가 불변함을 보장해야 합니다.
-* Congiguration Block - 채널과 전체 네트워크에 영향을 주는 설정 변경 사항은 이 블럭을 생성합니다. 이 블럭은 기원이 되는 블럭의 정보와 다양한 정보를 포함합니다.
+* Configuration Block - 채널과 전체 네트워크에 영향을 주는 설정 변경 사항은 이 블럭을 생성합니다. 이 블럭은 기원이 되는 블럭의 정보와 다양한 정보를 포함합니다.
 * Current State - 원장에 기록된 모든 유효한 트랜잭션의 최근 값, Chaincode 는 최근 상태의 데이터 값을 대상으로 실행된다.
 * Dynamic Membership - 멤버, peer, ordering service node 의 추가와 삭제를 전체 네트워크에 영향 없이 수행합니다.
 * Endorsement - 체인코드의 실행에 있어 이에 대한 승인을 뜻합니다.
